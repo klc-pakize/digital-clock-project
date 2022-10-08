@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 5rem !important;
+  color: rgba(65, 60, 60, 0.986);
+  background-color: rgb(17, 15, 15) !important;
+}
+.container {
+  margin-top: 15rem;
+}
+div.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  gap: 40px;
+  font-family: "Black Ops One", cursive;
+}
+
+div#clock,
+div#clock-1,
+div#clock-2,
+div#clock-3 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 8px 8px 5px 2px black;
+  overflow: hiden;
+}
+
+div#clock::before {
+  content: "";
+  border-radius: 50%;
+  background: conic-gradient(
+    rgb(98, 0, 255) 100deg,
+    rgb(247, 58, 0) 200deg,
+    transparent 360deg
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 3600s linear infinite;
+}
+
+div#clock-1::before {
+  content: "";
+  border-radius: 50%;
+  background: conic-gradient(
+    rgb(255, 174, 0) 160deg,
+    rgb(136, 19, 190) 200deg,
+    transparent 360deg
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 60s linear infinite;
+}
+
+div#clock-2::before {
+  content: "";
+  border-radius: 50%;
+  background: conic-gradient(
+    rgb(59, 34, 117) 200deg,
+    rgb(231, 60, 37) 160deg,
+    transparent 460deg
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 1s linear infinite;
+}
+
+div#clock-3::before {
+  content: "";
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(255, 251, 0, 0.719) 120deg,
+    rgb(38, 0, 255) 180deg,
+    transparent 350deg
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+div.cup {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* content: ""; */
+  color: white;
+  position: absolute;
+  border-radius: 50%;
+  line-height: 2;
+  width: 140px;
+  height: 140px;
+  background: rgb(36, 35, 35);
+  box-shadow: inset 15px 15px 15px rgb(20, 20, 20);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.day {
+  color: rgb(24, 0, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: "Faster One", cursive;
+  /* border: 1px solid red; */
+}
